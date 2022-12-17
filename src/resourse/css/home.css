@@ -1,0 +1,112 @@
+.home-sec {
+    background-image: url('../image/header-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.home-sec::before {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #0f0f0f;
+    top: 0;
+    opacity: 0.6;
+}
+
+.text-sec>p,
+h2,
+label {
+    color: #fff;
+}
+
+.text-sec {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.text-sec p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text-sec h2 {
+    font-size: 4rem;
+}
+
+.text-animation{
+    display: inline-flex;
+
+}
+.dynamic-txt{
+    overflow: hidden;
+    height: 85px;
+}
+.dynamic-txt li{
+    list-style: none;
+    margin-left: 10px;
+}
+.text-sec span {
+    font-size: 4rem;
+    font-weight: 700;
+    position: relative;
+    color: transparent;
+    /* -webkit-text-stroke: 0.1vw #ff6830; */
+}
+.text-sec span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #ff6830;
+    border-right: 3px solid #ff6830;
+    overflow: hidden;
+    animation: anim 3s linear infinite;
+}
+@keyframes anim{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+#txt1{
+    margin-top: 0;
+    animation: textanim 6s steps(2) infinite;
+}
+@keyframes textanim{
+    100%{
+        margin-top: -170px;
+    }
+}
+
+.text-sec label {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.text-sec button {
+    padding: 15px 46px;
+    margin-top: 25px;
+    background: transparent;
+    border: 3px solid #ff6830;
+    color: #ff6830;
+    font-size: 17px;
+    font-weight: 900;
+    border-radius: 45px;
+    transition: all 0.5s ease;
+}
+.text-sec button:hover{ 
+    background: #ff6830;
+    color: #fff;
+}

@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.App{
+    display: flex;
+}
+.navbar-container{
+    width: 19%;
+    float: left;
+    height:100vh;
+    position: fixed;
+}
+.main-container{
+    width: 81%;
+    height: 100vh;
+    margin-left: 19%;
+}
